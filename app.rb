@@ -21,6 +21,10 @@ get '/play' do
   @player_2_name = session[:player_2_name]
   erb :play
 end
+
+get '/attack' do
+  erb :attack
+end
 # start the server if ruby file executed directly
   run! if app_file == $0
 
