@@ -3,8 +3,11 @@ require 'game'
 describe Game do
   subject(:game) { described_class.new(player_1, player_2) }
 
-  let(:player_1) { double :player }
-  let(:player_2) { double :player }
+  let(:player_1) { double :player, hp: 60 }
+  let(:player_2) { double :player, hp: 60 }
+  let(:dead_player) { double :player, hp: 0 }
+
+  subject(:gamer) { described_class.new(dead_player, player_2) }
 
   describe '#player_1 and #player_2' do
     it 'gets a player_1' do
@@ -39,5 +42,16 @@ describe Game do
       expect(game.opponent_of(player_1)).to eq player_2
     end
   end
-  
+
+  describe '#game_over?' do
+    it 'tells us is a game is over' do
+      expect(game.game_over?).to eq false
+    end
+  end
+
+  describe '#check_for_loser' do
+    it 'add in dead_players to losers' do
+      expect(gamer.check_for_loser).not_to be_empty
+    end
+  end
 end

@@ -1,4 +1,3 @@
-
 feature '#attack' do
   scenario 'allows player_1 to attack player_2 and get a confirmation' do
     sign_in_and_play
