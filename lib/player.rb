@@ -1,5 +1,4 @@
-#require_relative 'game'
-
+# require_relative 'game'
 
 class Player
   DEFAULT_HP = 60
@@ -13,5 +12,4 @@ class Player
   def takes_damage
     @hp -= 10
   end
-
 end

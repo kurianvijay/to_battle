@@ -11,7 +11,7 @@ describe Player do
       expect(player1.name).to eq 'Vijay'
     end
   end
-  
+
   describe '#takes_damage' do
     it 'allows player1 to attack player2' do
       expect { player2.takes_damage }.to change { player2.hp }.by(-10)

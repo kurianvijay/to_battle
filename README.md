@@ -26,6 +26,9 @@ As Player 1,
 So I can see how close I am to losing,
 I want to see my own hit points
 
+Object | Messages
+player_1_hit_points | display_hit_points
+
 As Player 1,
 So I can lose a game of Battle,
 I want Player 2 to attack me, and I want to get a confirmation
